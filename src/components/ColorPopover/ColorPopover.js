@@ -1,13 +1,13 @@
 import React from "react";
 
 import Color from "../Color/Color";
-import Popper from "@material-ui/core/Popper";
-import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import Popover from "@material-ui/core/Popover";
 
-const colors = ["red", "green", "black", "orange"];
+const colors = ["red", "green", "black", "orange", "yellow", "grey"];
 
 export default (props) => {
-    const { onSelect, anchorEl } = props;
+    const { onSelect, anchorEl, onClose } = props;
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
@@ -17,9 +17,9 @@ export default (props) => {
             id={id}
             open={open}
             anchorEl={anchorEl}
-            onClose={handleClose}
+            onClose={onClose}
             anchorOrigin={{
-                vertical: 'bottom',
+                vertical: 'top',
                 horizontal: 'center',
             }}
             transformOrigin={{
@@ -27,12 +27,7 @@ export default (props) => {
                 horizontal: 'center',
             }}
         >
-        <Popper
-            id={id}
-            open={open}
-            anchorEl={anchorEl}
-        >
-            <Typography className={classes.typography}>
+            <Typography>
                 {colors.map((color) => (
                     <Color
                         style={{backgroundColor: color, margin: 5}}
@@ -40,6 +35,6 @@ export default (props) => {
                     />
                 ))}
             </Typography>
-        </Popper>
+        </Popover>
     );
 }

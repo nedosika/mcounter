@@ -1,10 +1,12 @@
 import React from 'react';
-import Users from "./components/Pages/Players/Players";
+import routes from "../../config/routes";
+import Routing from "../Routing/Routing";
+import {StoreProvider} from "../../store";
 
-function App() {
-  return (
-    <Users/>
-  );
+export default function App() {
+    return (
+        <StoreProvider>
+            <Routing routes={routes}/>
+        </StoreProvider>
+    );
 }
-
-export default App;

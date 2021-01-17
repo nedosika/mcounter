@@ -1,35 +1,47 @@
 import React from "react";
-import Layout from "../../components/Layout/Layout";
-import PlayerList from "./PlayerList/PlayerList";
+
 import Fab from "@material-ui/core/Fab";
 import AddIcon from '@material-ui/icons/Add';
-import Container from "@material-ui/core/Container";
-
 import {useHistory} from "react-router-dom";
-
-import useStyles from "./style";
-
+import {makeStyles} from "@material-ui/core/styles";
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from "@material-ui/core/IconButton";
 import EditIcon from '@material-ui/icons/Edit';
 import SettingsBackupRestoreIcon from '@material-ui/icons/SettingsBackupRestore';
 import CasinoIcon from '@material-ui/icons/Casino';
 
+import {useActions} from "../../store";
+import Layout from "../../components/Layout/Layout";
+import PlayerList from "../../components/PlayerList/PlayerList";
+import DiceDialog from "../../components/DiceDialog/DiceDialog";
+
+const useStyles = makeStyles((theme) => ({
+    fab: {
+        position: 'absolute',
+        bottom: theme.spacing(2),
+        right: theme.spacing(2),
+    },
+}))
+
 export default () => {
-    const classes = useStyles();
     const history = useHistory();
+    const classes = useStyles();
+    const {actions} = useActions();
+    const [openDiceDialog, setOpenDiceDialog] = React.useState(false);
 
     const renderButtons = (
         <>
             <IconButton
                 edge="end"
                 color="inherit"
+                onClick={actions.resetPlayers}
             >
                 <SettingsBackupRestoreIcon/>
             </IconButton>
             <IconButton
                 edge="end"
                 color="inherit"
+                onClick={setOpenDiceDialog}
             >
                 <CasinoIcon/>
             </IconButton>
@@ -43,13 +55,20 @@ export default () => {
     );
 
     return (
-        <Layout title="Манчкины" iconBtn={<MenuIcon/>} buttons={renderButtons}>
+        <Layout
+            title="Манчкины"
+            iconBtn={<MenuIcon/>}
+            buttons={renderButtons}
+        >
             <PlayerList/>
-            <Container>
-                <Fab color="primary" size="small" className={classes.fab}>
-                    <AddIcon onClick={() => history.push("/add")}/>
-                </Fab>
-            </Container>
+            <Fab
+                color="primary"
+                size="small"
+                className={classes.fab}
+            >
+                <AddIcon onClick={() => history.push("/add")}/>
+            </Fab>
+            <DiceDialog open={openDiceDialog} onClose={setOpenDiceDialog}/>
         </Layout>
     );
 }
