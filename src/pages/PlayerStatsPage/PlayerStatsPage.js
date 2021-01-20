@@ -64,14 +64,14 @@ export default (props) => {
                         <Counter
                             title="Уровень"
                             value={level}
-                            onDecrement={actions.decrementField(id, "level")}
-                            onIncrement={actions.incrementField(id, "level")}
+                            onDecrement={() => actions.decrementField([id, "level"])}
+                            onIncrement={() => actions.incrementField([id, "level"])}
                         />
                         <Counter
                             title="Шмотки"
                             value={things}
-                            onDecrement={actions.decrementField(id, "things")}
-                            onIncrement={actions.incrementField(id, "things")}
+                            onDecrement={() => actions.decrementField([id, "things"])}
+                            onIncrement={() =>actions.incrementField([id, "things"])}
                         />
                         <Box style={{textAlign: "center"}}>
                             <Typography variant="h4" component="h2" gutterBottom>
@@ -83,7 +83,7 @@ export default (props) => {
                             <Fab
                                 color="primary"
                                 size="small"
-                                onClick={actions.toggleGender(id)}
+                                onClick={() => actions.toggleGender(id)}
                                 className={classes.genderBtn}
                             >
                                 {gender === "male" ? <MaleIcon/> : <FemaleIcon/>}

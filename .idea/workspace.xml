@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f4780c9-b7f9-4e88-99f9-29ec4631a745" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/actions/decrement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decrement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/addPlayerAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/resetPlayerAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/toggleGenderAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/decrement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decrementFieldAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/increment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/incrementFieldAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PlayerStatsPage/PlayerStatsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlayerStatsPage/PlayerStatsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +117,7 @@
       <workItem from="1600192156378" duration="19928000" />
       <workItem from="1610824356944" duration="220000" />
       <workItem from="1610824667788" duration="899000" />
-      <workItem from="1611130487271" duration="2547000" />
+      <workItem from="1611130487271" duration="4977000" />
     </task>
     <task id="LOCAL-00001" summary="add actions">
       <created>1611136332607</created>
@@ -119,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611136332607</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add check negative values">
+      <created>1611136665206</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611136665206</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +154,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="add actions" />
+    <MESSAGE value="add check negative values" />
+    <option name="LAST_COMMIT_MESSAGE" value="add check negative values" />
   </component>
 </project>

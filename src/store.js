@@ -1,6 +1,9 @@
 import React from "react";
-import {increment} from "./actions/increment";
-import {decrement} from "./actions/decrement";
+import {incrementFieldAction} from "./actions/incrementFieldAction";
+import {decrementFieldAction} from "./actions/decrementFieldAction";
+import {addPlayerAction} from "./actions/addPlayerAction";
+import {toggleGenderAction} from "./actions/toggleGenderAction";
+import {resetPlayerAction} from "./actions/resetPlayerAction";
 
 export const UPDATE_PLAYER = Symbol("UPDATE_PLAYER");
 export const UPDATE_PLAYERS = Symbol("UPDATE_PLAYERS");
@@ -60,39 +63,18 @@ const ActionsContext = React.createContext(null);
 const StoreProvider = (props) => {
     const [state, dispatch] = React.useReducer(reducer, localState || initialState);
 
-    const actions = {
-        incrementField: (id, field) => () => {
-            dispatch(increment(id, field, state.players))
-        },
-        decrementField: (id, field) => () => {
-            dispatch(decrement(id, field, state.players));
-        },
-        addPlayer: (player) => {
-            dispatch({
-                type: ADD_PLAYER,
-                payload: player
-            })
-        },
-        toggleGender: (id) => () => {
-            const index = state.players.findIndex(item => item.id === id);
-            dispatch({
-                type: UPDATE_PLAYER,
-                payload: {
-                    id,
-                    gender: state.players[index].gender === "male" ? "female" : "male"
-                }
-            });
-        },
-        resetPlayers: () => {
-            dispatch({
-                type: UPDATE_PLAYERS,
-                payload: state.players.map(player => ({
-                    ...player,
-                    level: 1,
-                    things: 0
-                }))
-            });
+    const actionCreator = (action) => {
+        return (params) => {
+            dispatch(action(params, state))
         }
+    }
+
+    const actions = {
+        incrementField: actionCreator(incrementFieldAction),
+        decrementField: actionCreator(decrementFieldAction),
+        addPlayer: actionCreator(addPlayerAction),
+        toggleGender: actionCreator(toggleGenderAction),
+        resetPlayers: actionCreator(resetPlayerAction)
     };
 
     React.useEffect(() => {

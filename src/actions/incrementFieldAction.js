@@ -1,6 +1,6 @@
 import {UPDATE_PLAYER} from "../store";
 
-export const increment = (id, field, players) => {
+export const incrementFieldAction = ([id, field], {players}) => {
     const index = players.findIndex(item => item.id === id);
     return {
         type: UPDATE_PLAYER,
