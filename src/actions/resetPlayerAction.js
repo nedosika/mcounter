@@ -1,4 +1,4 @@
-import {UPDATE_PLAYERS} from "../store";
+import {UPDATE_PLAYERS} from "../consts";
 
 export const resetPlayerAction = (params, {players}) => {
     return {

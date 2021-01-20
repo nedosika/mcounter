@@ -1,4 +1,4 @@
-import {ADD_PLAYER} from "../store";
+import {ADD_PLAYER} from "../consts";
 
 export const addPlayerAction = (player) => {
     return {

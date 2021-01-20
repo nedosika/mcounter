@@ -4,48 +4,7 @@ import {decrementFieldAction} from "./actions/decrementFieldAction";
 import {addPlayerAction} from "./actions/addPlayerAction";
 import {toggleGenderAction} from "./actions/toggleGenderAction";
 import {resetPlayerAction} from "./actions/resetPlayerAction";
-
-export const UPDATE_PLAYER = Symbol("UPDATE_PLAYER");
-export const UPDATE_PLAYERS = Symbol("UPDATE_PLAYERS");
-export const ADD_PLAYER = Symbol("ADD_PLAYER");
-
-const reducer = (state, action) => {
-    const {players} = state;
-    const {type, payload} = action;
-
-    switch (type) {
-        case UPDATE_PLAYER:
-            const index = players.findIndex(item => item.id === Number(payload.id));
-
-            return {
-                ...state,
-                players: [
-                    ...players.slice(0, index),
-                    {
-                        ...players[index],
-                        ...payload
-                    },
-                    ...players.slice(index + 1)
-                ]
-            }
-        case UPDATE_PLAYERS:
-            return {...state, players: payload}
-        case ADD_PLAYER:
-            return {
-                ...state,
-                players: [
-                    ...players,
-                    {
-                        ...payload,
-                        level: 1,
-                        things: 0
-                    }
-                ]
-            }
-        default:
-            return state;
-    }
-}
+import {reducer} from "./reducers/rootReducer";
 
 const initialState = {
     players: [

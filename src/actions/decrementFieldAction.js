@@ -1,4 +1,4 @@
-import {UPDATE_PLAYER} from "../store";
+import {UPDATE_PLAYER} from "../consts";
 
 export const decrementFieldAction = ([id, field], {players}) => {
     const index = players.findIndex(item => item.id === id);

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f4780c9-b7f9-4e88-99f9-29ec4631a745" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Routing/Routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PlayersPage/PlayersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlayersPage/PlayersPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/consts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611174344911</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactoring routes">
+      <created>1611174818491</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611174818491</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,13 +161,14 @@
     <MESSAGE value="add actions" />
     <MESSAGE value="add check negative values" />
     <MESSAGE value="fix dice" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix dice" />
+    <MESSAGE value="refactoring routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring routes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="276" y="0" key="CommitChangelistDialog2" timestamp="1611174343429">
+    <state x="276" y="0" key="CommitChangelistDialog2" timestamp="1611174817517">
       <screen x="0" y="0" width="1302" height="768" />
     </state>
-    <state x="276" y="0" key="CommitChangelistDialog2/0.0.1302.768@0.0.1302.768" timestamp="1611174343429" />
+    <state x="276" y="0" key="CommitChangelistDialog2/0.0.1302.768@0.0.1302.768" timestamp="1611174817517" />
     <state width="1281" height="192" key="GridCell.Tab.0.bottom" timestamp="1611171902071">
       <screen x="0" y="0" width="1302" height="768" />
     </state>
@@ -177,6 +185,10 @@
       <screen x="0" y="0" width="1302" height="768" />
     </state>
     <state width="1281" height="192" key="GridCell.Tab.0.right/0.0.1302.768@0.0.1302.768" timestamp="1611171902071" />
+    <state x="243" y="117" key="Vcs.Push.Dialog.v2" timestamp="1611174824525">
+      <screen x="0" y="0" width="1302" height="768" />
+    </state>
+    <state x="243" y="117" key="Vcs.Push.Dialog.v2/0.0.1302.768@0.0.1302.768" timestamp="1611174824525" />
     <state x="307" y="172" key="run.anything.popup" timestamp="1611174013351">
       <screen x="0" y="0" width="1302" height="768" />
     </state>
