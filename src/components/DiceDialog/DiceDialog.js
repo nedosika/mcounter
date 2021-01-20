@@ -8,10 +8,9 @@ import Looks5Icon from '@material-ui/icons/Looks5';
 import Looks6Icon from '@material-ui/icons/Looks6';
 import Dialog from "@material-ui/core/Dialog";
 
-function getDiceIcon() {
-    const random = Math.floor(Math.random() * 6 + 1);
+const getDiceIcon = (number) => {
 
-    switch (random) {
+    switch (number) {
         case 1:
             return <LooksOneIcon/>
         case 2:
@@ -30,17 +29,10 @@ function getDiceIcon() {
 }
 
 export default (props) => {
-    const {onClose, open} = props;
-
-    const handleClose = () => {
-        onClose();
-    };
-
+    const {onClose, open, number} = props;
     return (
-        <Dialog onClose={handleClose} open={open}>
-            {
-                getDiceIcon()
-            }
+        <Dialog onClose={() => onClose(false)} open={open}>
+            {getDiceIcon(number)}
         </Dialog>
     )
 }

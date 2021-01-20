@@ -28,6 +28,13 @@ export default () => {
     const classes = useStyles();
     const {actions} = useActions();
     const [openDiceDialog, setOpenDiceDialog] = React.useState(false);
+    const [random, setRandom] = React.useState(0);
+
+    const handleOpenDiceDialog = () => {
+        const random = Math.floor(Math.random() * 6 + 1);
+        setRandom(random);
+        setOpenDiceDialog(true);
+    }
 
     const renderButtons = (
         <>
@@ -41,7 +48,7 @@ export default () => {
             <IconButton
                 edge="end"
                 color="inherit"
-                onClick={setOpenDiceDialog}
+                onClick={() => handleOpenDiceDialog()}
             >
                 <CasinoIcon/>
             </IconButton>
@@ -53,6 +60,8 @@ export default () => {
             </IconButton>
         </>
     );
+
+
 
     return (
         <Layout
@@ -68,7 +77,7 @@ export default () => {
             >
                 <AddIcon onClick={() => history.push("/add")}/>
             </Fab>
-            <DiceDialog open={openDiceDialog} onClose={setOpenDiceDialog}/>
+            <DiceDialog open={openDiceDialog} onClose={setOpenDiceDialog} number={random}/>
         </Layout>
     );
 }

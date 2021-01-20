@@ -8,9 +8,9 @@ import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 import MaleIcon from "../MaleIcon/MaleIcon";
 import FemaleIcon from "../FemaleIcon/FemaleIcon";
 import Badge from "@material-ui/core/Badge";
-import BatteryChargingFullIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import ColorizeIcon from '@material-ui/icons/Colorize';
 import {makeStyles} from "@material-ui/core/styles";
+import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -44,7 +44,7 @@ export default ({player}) => {
                 color="primary"
                 className={classes.info}
             >
-                <BatteryChargingFullIcon/>
+                <DirectionsWalkIcon/>
             </Badge>
             <Badge
                 badgeContent={player.level + player.things}
