@@ -61,8 +61,6 @@ export default () => {
         </>
     );
 
-
-
     return (
         <Layout
             title="Манчкины"

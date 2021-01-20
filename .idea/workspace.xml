@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f4780c9-b7f9-4e88-99f9-29ec4631a745" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DiceDialog/DiceDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DiceDialog/DiceDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Player/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Player/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Routing/Routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/routes.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/PlayersPage/PlayersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlayersPage/PlayersPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,15 +49,15 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\HTML\#REACT\mcounter\src\config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\#PROJECTS\REACT\mcounter\src" />
       <recent name="D:\HTML\#REACT\mcounter\src\components" />
       <recent name="D:\HTML\#REACT\mcounter\src\providers\Users" />
       <recent name="D:\HTML\#REACT\mcounter\src\pages" />
       <recent name="D:\HTML\#REACT\mcounter\src\containers" />
-      <recent name="D:\HTML\#REACT\mcounter\src\components\App" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\HTML\#REACT\mcounter\src\config" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611136665206</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix dice">
+      <created>1611174344911</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611174344911</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,9 +153,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add actions" />
     <MESSAGE value="add check negative values" />
-    <option name="LAST_COMMIT_MESSAGE" value="add check negative values" />
+    <MESSAGE value="fix dice" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix dice" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="276" y="0" key="CommitChangelistDialog2" timestamp="1611174343429">
+      <screen x="0" y="0" width="1302" height="768" />
+    </state>
+    <state x="276" y="0" key="CommitChangelistDialog2/0.0.1302.768@0.0.1302.768" timestamp="1611174343429" />
     <state width="1281" height="192" key="GridCell.Tab.0.bottom" timestamp="1611171902071">
       <screen x="0" y="0" width="1302" height="768" />
     </state>
