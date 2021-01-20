@@ -1,4 +1,6 @@
 import React from "react";
+import {increment} from "./actions/increment";
+import {decrement} from "./actions/decrement";
 
 export const UPDATE_PLAYER = Symbol("UPDATE_PLAYER");
 export const UPDATE_PLAYERS = Symbol("UPDATE_PLAYERS");
@@ -60,24 +62,10 @@ const StoreProvider = (props) => {
 
     const actions = {
         incrementField: (id, field) => () => {
-            const index = state.players.findIndex(item => item.id === id);
-            dispatch({
-                type: UPDATE_PLAYER,
-                payload: {
-                    id,
-                    [field]: state.players[index][field] + 1
-                }
-            })
+            dispatch(increment(id, field, state.players))
         },
         decrementField: (id, field) => () => {
-            const index = state.players.findIndex(item => item.id === id);
-            dispatch({
-                type: UPDATE_PLAYER,
-                payload: {
-                    id,
-                    [field]: state.players[index][field] - 1
-                }
-            })
+            dispatch(decrement(id, field, state.players));
         },
         addPlayer: (player) => {
             dispatch({
