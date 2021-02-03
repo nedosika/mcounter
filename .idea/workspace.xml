@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f4780c9-b7f9-4e88-99f9-29ec4631a745" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/consts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/rootReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/deletePlayerAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Player/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Player/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayerList/PlayerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerList/PlayerList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/consts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PlayersPage/PlayersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PlayersPage/PlayersPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/rootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/actions" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -47,17 +51,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\HTML\#REACT\mcounter\src\config" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\#PROJECTS\REACT\mcounter\src" />
       <recent name="D:\HTML\#REACT\mcounter\src\components" />
       <recent name="D:\HTML\#REACT\mcounter\src\providers\Users" />
       <recent name="D:\HTML\#REACT\mcounter\src\pages" />
       <recent name="D:\HTML\#REACT\mcounter\src\containers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\#PROJECTS\REACT\mcounter\src\actions" />
+      <recent name="D:\HTML\#REACT\mcounter\src\config" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -110,6 +116,8 @@
       <workItem from="1610824356944" duration="220000" />
       <workItem from="1610824667788" duration="899000" />
       <workItem from="1611130487271" duration="4977000" />
+      <workItem from="1611470696007" duration="28000" />
+      <workItem from="1612372122597" duration="5798000" />
     </task>
     <task id="LOCAL-00001" summary="add actions">
       <created>1611136332607</created>
@@ -139,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611174818491</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactoring reducer">
+      <created>1611175676881</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611175676881</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,33 +177,38 @@
     <MESSAGE value="add check negative values" />
     <MESSAGE value="fix dice" />
     <MESSAGE value="refactoring routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring routes" />
+    <MESSAGE value="refactoring reducer" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring reducer" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="276" y="0" key="CommitChangelistDialog2" timestamp="1611174817517">
+    <state x="381" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612376797799">
       <screen x="0" y="0" width="1302" height="768" />
     </state>
-    <state x="276" y="0" key="CommitChangelistDialog2/0.0.1302.768@0.0.1302.768" timestamp="1611174817517" />
-    <state width="1281" height="192" key="GridCell.Tab.0.bottom" timestamp="1611171902071">
+    <state x="381" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1302.768@0.0.1302.768" timestamp="1612376797799" />
+    <state x="276" y="0" key="CommitChangelistDialog2" timestamp="1611175675735">
       <screen x="0" y="0" width="1302" height="768" />
     </state>
-    <state width="1281" height="192" key="GridCell.Tab.0.bottom/0.0.1302.768@0.0.1302.768" timestamp="1611171902071" />
-    <state width="1281" height="192" key="GridCell.Tab.0.center" timestamp="1611171902071">
+    <state x="276" y="0" key="CommitChangelistDialog2/0.0.1302.768@0.0.1302.768" timestamp="1611175675735" />
+    <state width="1281" height="192" key="GridCell.Tab.0.bottom" timestamp="1612372179909">
       <screen x="0" y="0" width="1302" height="768" />
     </state>
-    <state width="1281" height="192" key="GridCell.Tab.0.center/0.0.1302.768@0.0.1302.768" timestamp="1611171902071" />
-    <state width="1281" height="192" key="GridCell.Tab.0.left" timestamp="1611171902070">
+    <state width="1281" height="192" key="GridCell.Tab.0.bottom/0.0.1302.768@0.0.1302.768" timestamp="1612372179909" />
+    <state width="1281" height="192" key="GridCell.Tab.0.center" timestamp="1612372179909">
       <screen x="0" y="0" width="1302" height="768" />
     </state>
-    <state width="1281" height="192" key="GridCell.Tab.0.left/0.0.1302.768@0.0.1302.768" timestamp="1611171902070" />
-    <state width="1281" height="192" key="GridCell.Tab.0.right" timestamp="1611171902071">
+    <state width="1281" height="192" key="GridCell.Tab.0.center/0.0.1302.768@0.0.1302.768" timestamp="1612372179909" />
+    <state width="1281" height="192" key="GridCell.Tab.0.left" timestamp="1612372179908">
       <screen x="0" y="0" width="1302" height="768" />
     </state>
-    <state width="1281" height="192" key="GridCell.Tab.0.right/0.0.1302.768@0.0.1302.768" timestamp="1611171902071" />
-    <state x="243" y="117" key="Vcs.Push.Dialog.v2" timestamp="1611174824525">
+    <state width="1281" height="192" key="GridCell.Tab.0.left/0.0.1302.768@0.0.1302.768" timestamp="1612372179908" />
+    <state width="1281" height="192" key="GridCell.Tab.0.right" timestamp="1612372179909">
       <screen x="0" y="0" width="1302" height="768" />
     </state>
-    <state x="243" y="117" key="Vcs.Push.Dialog.v2/0.0.1302.768@0.0.1302.768" timestamp="1611174824525" />
+    <state width="1281" height="192" key="GridCell.Tab.0.right/0.0.1302.768@0.0.1302.768" timestamp="1612372179909" />
+    <state x="243" y="117" key="Vcs.Push.Dialog.v2" timestamp="1611175687123">
+      <screen x="0" y="0" width="1302" height="768" />
+    </state>
+    <state x="243" y="117" key="Vcs.Push.Dialog.v2/0.0.1302.768@0.0.1302.768" timestamp="1611175687123" />
     <state x="307" y="172" key="run.anything.popup" timestamp="1611174013351">
       <screen x="0" y="0" width="1302" height="768" />
     </state>

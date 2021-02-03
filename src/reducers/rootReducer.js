@@ -1,4 +1,9 @@
-import {ADD_PLAYER, UPDATE_PLAYER, UPDATE_PLAYERS} from "../consts";
+import {
+    ADD_PLAYER,
+    DELETE_PLAYER,
+    UPDATE_PLAYER,
+    UPDATE_PLAYERS
+} from "../consts";
 
 export const reducer = (state, action) => {
     const {players} = state;
@@ -6,17 +11,17 @@ export const reducer = (state, action) => {
 
     switch (type) {
         case UPDATE_PLAYER:
-            const index = players.findIndex(item => item.id === Number(payload.id));
+            const updateIndex = players.findIndex(player => player.id === Number(payload.id));
 
             return {
                 ...state,
                 players: [
-                    ...players.slice(0, index),
+                    ...players.slice(0, updateIndex),
                     {
-                        ...players[index],
+                        ...players[updateIndex],
                         ...payload
                     },
-                    ...players.slice(index + 1)
+                    ...players.slice(updateIndex + 1)
                 ]
             }
         case UPDATE_PLAYERS:
@@ -32,6 +37,16 @@ export const reducer = (state, action) => {
                         things: 0
                     }
                 ]
+            }
+        case DELETE_PLAYER:
+            const deleteIndex = players.findIndex(player => player.id === Number(payload.id));
+
+            return {
+                ...state,
+                players: {
+                    ...players.slice(0, deleteIndex),
+                    ...players.slice(deleteIndex + 1)
+                }
             }
         default:
             return state;

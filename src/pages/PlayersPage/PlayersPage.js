@@ -28,12 +28,20 @@ export default () => {
     const classes = useStyles();
     const {actions} = useActions();
     const [openDiceDialog, setOpenDiceDialog] = React.useState(false);
+    const [editMode, setEditMode] = React.useState(false);
     const [random, setRandom] = React.useState(0);
+
+    console.log(editMode);
 
     const handleOpenDiceDialog = () => {
         const random = Math.floor(Math.random() * 6 + 1);
         setRandom(random);
         setOpenDiceDialog(true);
+    }
+
+    const toggleEditMode = () => {
+        console.log("toggle");
+        setEditMode(currentMode => !currentMode)
     }
 
     const renderButtons = (
@@ -55,6 +63,7 @@ export default () => {
             <IconButton
                 edge="end"
                 color="inherit"
+                onClick={toggleEditMode}
             >
                 <EditIcon/>
             </IconButton>
@@ -67,7 +76,7 @@ export default () => {
             iconBtn={<MenuIcon/>}
             buttons={renderButtons}
         >
-            <PlayerList/>
+            <PlayerList editMode={editMode}/>
             <Fab
                 color="primary"
                 size="small"
