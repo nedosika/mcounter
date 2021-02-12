@@ -81,8 +81,9 @@ export default () => {
                 color="primary"
                 size="small"
                 className={classes.fab}
+                onClick={() => history.push("/add")}
             >
-                <AddIcon onClick={() => history.push("/add")}/>
+                <AddIcon/>
             </Fab>
             <DiceDialog open={openDiceDialog} onClose={setOpenDiceDialog} number={random}/>
         </Layout>
